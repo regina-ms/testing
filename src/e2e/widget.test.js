@@ -7,7 +7,10 @@ describe('widget show is card valid or not', () => {
   let page;
 
   beforeEach(async () => {
-    browser = await puppeteer.launch();
+    browser = await puppeteer.launch({
+      headless: false,
+      slowMo: 100,
+    });
 
     page = await browser.newPage();
     await page.goto('http://localhost:8080/');
