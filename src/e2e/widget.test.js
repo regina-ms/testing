@@ -8,7 +8,7 @@ describe('widget show is card valid or not', () => {
 
   beforeEach(async () => {
     browser = await puppeteer.launch({
-      /* headless: false, */
+      headless: false,
       slowMo: 100,
       devtools: true,
     });
@@ -39,7 +39,7 @@ describe('widget show is card valid or not', () => {
     await page.waitForSelector('.form-container input.invalid');
   });
 
-  afterEach(async () => {
+  /*afterEach(async () => {
     await browser.close();
-  });
+  });*/
 });
